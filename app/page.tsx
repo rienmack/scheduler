@@ -8,7 +8,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <Input placeholder='Enter an event name...' />
+          <Input placeholder='Enter a meeting name...' />
           <Link href="/date" className={buttonVariants({ variant: "default" })}>Continue</Link>
         </div>
       </main >
