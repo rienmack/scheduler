@@ -2,10 +2,13 @@
 
 import { Calendar } from "@/components/ui/calendar"
 import { useState } from "react";
+import { useSearchParams } from 'next/navigation'
 import { buttonVariants } from "@/components/ui/button"
 import Link from 'next/link'
 
 export default function Page() {
+  const searchParams = useSearchParams()
+  console.log(searchParams.get('name'))
   const [dates, setDates] = useState<Date[]>([]);
 
   return (
