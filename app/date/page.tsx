@@ -2,7 +2,8 @@
 
 import { Calendar } from "@/components/ui/calendar"
 import { useState } from "react";
-
+import { buttonVariants } from "@/components/ui/button"
+import Link from 'next/link'
 
 export default function Page() {
   const [dates, setDates] = useState<Date[]>([]);
@@ -24,6 +25,9 @@ export default function Page() {
             }}
             className="rounded-md border"
           />
+          {dates.length > 0 &&
+            <Link href="/date" className={buttonVariants({ variant: "default" })}>Continue</Link>
+          }
         </div>
       </main >
     </div >
